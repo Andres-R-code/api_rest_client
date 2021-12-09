@@ -24,6 +24,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, \
 from django.conf.urls import url
 from rest_framework.routers import DefaultRouter
 from moduls.users.views import UserViewSet
+from moduls.clients.views import ClientViewSet
 
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
@@ -45,6 +46,7 @@ schema_view = get_schema_view(
 router = DefaultRouter()
 
 router.register( 'users', UserViewSet ,)
+router.register( 'clients', ClientViewSet ,)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

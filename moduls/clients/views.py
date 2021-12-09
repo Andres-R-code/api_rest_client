@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from rest_framework.permissions import IsAuthenticated
+
+from moduls.clients.models import Client
+from moduls.clients.serializers import GetClientsSerializers
+
+
+class ClientViewSet(ModelViewSet):
+    queryset = Client.objects.all()
+    serializer_class = GetClientsSerializers
+    permission_classes = (IsAuthenticated, )

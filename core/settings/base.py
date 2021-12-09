@@ -41,6 +41,8 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'moduls.users.apps.UsersConfig',
+    'moduls.clients',
+    
 ]
 
 THIRD_APPS = [
