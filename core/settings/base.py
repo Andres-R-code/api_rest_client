@@ -42,6 +42,7 @@ BASE_APPS = [
 LOCAL_APPS = [
     'moduls.users.apps.UsersConfig',
     'moduls.clients',
+    'moduls.products',
     
 ]
 

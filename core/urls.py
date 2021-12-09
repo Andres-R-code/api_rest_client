@@ -25,6 +25,7 @@ from django.conf.urls import url
 from rest_framework.routers import DefaultRouter
 from moduls.users.views import UserViewSet
 from moduls.clients.views import ClientViewSet
+from moduls.products.views import ProducViewSet
 
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
@@ -47,6 +48,7 @@ router = DefaultRouter()
 
 router.register( 'users', UserViewSet ,)
 router.register( 'clients', ClientViewSet ,)
+router.register( 'products', ProducViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
