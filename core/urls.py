@@ -23,6 +23,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, \
 
 from django.conf.urls import url
 from rest_framework.routers import DefaultRouter
+from moduls.bills.views import BillViewSet
 from moduls.users.views import UserViewSet
 from moduls.clients.views import ClientViewSet
 from moduls.products.views import ProducViewSet
@@ -49,6 +50,7 @@ router = DefaultRouter()
 router.register( 'users', UserViewSet ,)
 router.register( 'clients', ClientViewSet ,)
 router.register( 'products', ProducViewSet)
+router.register( 'bills', BillViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
