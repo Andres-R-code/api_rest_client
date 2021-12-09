@@ -50,6 +50,7 @@ THIRD_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_yasg',
+    'import_export',
 ]
 
 INSTALLED_APPS  = BASE_APPS + LOCAL_APPS + THIRD_APPS
